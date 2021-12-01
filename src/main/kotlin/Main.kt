@@ -1,4 +1,4 @@
-class Pila<T>() {
+class Pila<T> {
      private var lista = mutableListOf<T>()
 
     fun top() = lista[0]
@@ -6,13 +6,12 @@ class Pila<T>() {
     fun pop(): Boolean = lista.remove(lista[0])
     fun vacia(): Boolean = lista.isEmpty()
     fun isNotEmpty(): Boolean = lista.isNotEmpty()
-    fun toList():List<T> =lista.toList()
 }
 
 fun <T> reverse(lista: List<T>): List<T> {
     val pila=Pila<T>()
     val iterador=lista.iterator()
-    var listaInvertida= mutableListOf<T>()
+    val listaInvertida= mutableListOf<T>()
     while (iterador.hasNext()) {
         pila.push(iterador.next())
     }
@@ -23,8 +22,8 @@ fun <T> reverse(lista: List<T>): List<T> {
 }
 
 fun main() {
-    var numbers = listOf("one", "two", "three", "four")
-    var numbersRev = reverse(numbers)
+    val numbers = listOf("one", "two", "three", "four")
+    val numbersRev = reverse(numbers)
     if (listOf("four", "three", "two", "one") != numbersRev)
         println("Error")
     else
