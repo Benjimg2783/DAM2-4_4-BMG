@@ -1,7 +1,7 @@
 class Pila<T> {
      private var lista = mutableListOf<T>()
 
-    fun top() = lista[0]
+    fun tope() = lista[0]
     fun push(elemento: T) = lista.add(0,elemento)
     fun pop(): Boolean = lista.remove(lista[0])
     fun vacia(): Boolean = lista.isEmpty()
@@ -16,7 +16,7 @@ fun <T> reverse(lista: List<T>): List<T> {
         pila.push(iterador.next())
     }
     while (pila.isNotEmpty()){
-        pila.top()?.let { listaInvertida.add(it) }
+        pila.tope()?.let { listaInvertida.add(it) }
         pila.pop() }
     return listaInvertida
 }
