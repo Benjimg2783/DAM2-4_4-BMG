@@ -1,10 +1,6 @@
 class Pila<T>() {
      private var lista = mutableListOf<T>()
 
-    constructor(lista: List<T>) : this() {
-        this.lista = lista.toMutableList()
-    }
-
     fun top() = lista[0]
     fun push(elemento: T) = lista.add(0,elemento)
     fun pop(): Boolean = lista.remove(lista[0])
